@@ -16,6 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- Setup vim opts
 require("vim-opts")
+require("plugins.code_formatting.rustaceanvim-pref")
 -- Setup lazy.nvim
 require("lazy").setup({
 	{ import = "plugins.features" },
