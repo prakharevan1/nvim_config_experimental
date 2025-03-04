@@ -2,6 +2,12 @@ return {
 	"mrcjkb/rustaceanvim",
 	version = "^4",
 	ft = { "rust" },
+	lazy = false,
+	["rust-analyzer"] = {
+		cargo = {
+			allFeatures = true,
+		},
+	},
 	dependencies = { "mfussenegger/nvim-dap" },
 	config = function()
 		local cfg = require("rustaceanvim.config")
