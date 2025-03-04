@@ -14,9 +14,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	end
 end
 vim.opt.rtp:prepend(lazypath)
+-- rustaceanvim
+require("plugins.code_formatting.rustaceanvim")
 -- Setup vim opts
 require("vim-opts")
-require("plugins.code_formatting.rustaceanvim-pref")
 -- Setup lazy.nvim
 require("lazy").setup({
 	{ import = "plugins.features" },

@@ -8,6 +8,9 @@ return {
 						mode = "diagnostics", -- inherit from diagnostics mode
 						filter = { buf = 0 }, -- filter diagnostics to the current buffer
 					},
+					diagnostics = {
+						auto_open = true,
+					},
 				},
 			},
 		}, -- for default options, refer to the configuration section for custom setup.
@@ -44,5 +47,12 @@ return {
 				desc = "Quickfix List (Trouble)",
 			},
 		},
+		config = function()
+			require("trouble").setup({
+				focus = true,
+				auto_close = true,
+				use_diagnostic_signs = true,
+			})
+		end,
 	},
 }
